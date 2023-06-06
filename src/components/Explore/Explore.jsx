@@ -11,6 +11,7 @@ import exploreImg3 from '../../assets/images/explore-img3.svg';
 import exploreImg4 from '../../assets/images/explore-img4.svg';
 import exploreImg5 from '../../assets/images/explore-img5.svg';
 import Color from 'Color/Color';
+import Card from 'components/Card/Card';
 
 export const Explore = () => {
   return (
@@ -42,20 +43,24 @@ export const Explore = () => {
 
           <div className="row">
             <div className="col-6 col-left">
-              <img src={exploreImg1} alt="explore 1" />
+              <Card src={exploreImg1}></Card>
             </div>
             <div className="col-6 col-right">
               <div className="explore-img-item">
-                <img src={exploreImg2} alt="exploreImg 2" />
+                {/* <img src={exploreImg2} alt="exploreImg 2" /> */}
+                <Card src={exploreImg2}></Card>
               </div>
               <div className="explore-img-item">
-                <img src={exploreImg3} alt="exploreImg 3" />
+                {/* <img src={exploreImg3} alt="exploreImg 3" /> */}
+                <Card src={exploreImg3} sale={'sale'} tag={true}></Card>
               </div>
               <div className="explore-img-item">
-                <img src={exploreImg4} alt=" exploreImg 4" />
+                {/* <img src={exploreImg4} alt=" exploreImg 4" /> */}
+                <Card src={exploreImg4}></Card>
               </div>
               <div className="explore-img-item">
-                <img src={exploreImg5} alt="exploreImg 5" />
+                {/* <img src={exploreImg5} alt="exploreImg 5" /> */}
+                <Card src={exploreImg5}></Card>
               </div>
             </div>
           </div>
