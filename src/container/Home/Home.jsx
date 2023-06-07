@@ -1,5 +1,6 @@
 import {Collection} from 'components/Collection';
 import {Explore} from 'components/Explore';
+import {Hero} from 'components/Hero';
 import {Products} from 'components/Products';
 import React from 'react';
 
@@ -13,6 +14,10 @@ const Home = () => {
 
       <div className="products-section">
         <Products></Products>
+      </div>
+
+      <div className="hero-section">
+        <Hero></Hero>
       </div>
     </div>
   );

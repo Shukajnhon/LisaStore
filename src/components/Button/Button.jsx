@@ -34,6 +34,7 @@ const ButtonStyle = styled.button`
   height: ${(props) => props.height};
   background-color: ${(props) => props.bgColor};
   color: ${(props) => props.textColor};
+  border: none;
   cursor: pointer;
 `;
 
@@ -42,6 +43,6 @@ Button.defaultProps = {
   textColor: '#ffff',
   width: '128px',
   height: '46px',
-  borderRadius: '40px',
+  // borderRadius: '40px',
   fontSize: '16px',
 };

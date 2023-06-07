@@ -75,6 +75,7 @@ export const Products = () => {
 
 const ProductsStyle = styled.div`
   background-color: #fff;
+  padding-bottom: 66px;
   .products-wrapper {
     max-width: 1200px;
     margin: 0 auto;
