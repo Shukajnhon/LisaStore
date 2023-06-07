@@ -29,13 +29,17 @@ const Card = ({
         <img src={src} alt={alt} />
         {tag && (
           <div className="card-tag">
-            <div className="sale">
-              <div className="sale-text">{sale}</div>
-            </div>
+            {sale && (
+              <div className="sale">
+                <div className="sale-text">{sale}</div>
+              </div>
+            )}
 
-            <div className="hot">
-              <div className="hot-text">{hot}</div>
-            </div>
+            {hot && (
+              <div className="hot">
+                <div className="hot-text">{hot}</div>
+              </div>
+            )}
           </div>
         )}
 

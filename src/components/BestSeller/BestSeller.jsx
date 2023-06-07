@@ -75,11 +75,23 @@ export const BestSeller = () => {
 
         <div className="best-seller-list">
           <Slider {...settings}>
-            <Card type width="290px" src={bestSellImg1}></Card>
+            <Card
+              hot={'hot'}
+              tag={true}
+              type
+              width="290px"
+              src={bestSellImg1}
+            ></Card>
             <Card type width="290px" src={bestSellImg2}></Card>
             <Card type width="290px" src={bestSellImg3}></Card>
             <Card type width="290px" src={bestSellImg4}></Card>
-            <Card type width="290px" src={bestSellImg5}></Card>
+            <Card
+              sale={'sale'}
+              tag={true}
+              type
+              width="290px"
+              src={bestSellImg5}
+            ></Card>
             <Card type width="290px" src={bestSellImg6}></Card>
             <Card type width="290px" src={bestSellImg7}></Card>
             <Card type width="290px" src={bestSellImg8}></Card>
@@ -91,7 +103,7 @@ export const BestSeller = () => {
 };
 
 const BestSellerStyle = styled.div`
-  padding-top: 100px;
+  padding: 100px 0;
   background-color: ${Color.whiteColor};
   .best-seller-wrap {
     max-width: 1200px;

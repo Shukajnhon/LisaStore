@@ -45,13 +45,25 @@ export const Products = () => {
 
         <div className="products-list">
           <div className="products-list-items">
-            <Card type={true} src={productImg1} width={'280px'}></Card>
+            <Card
+              hot={'hot'}
+              tag={true}
+              type={true}
+              src={productImg1}
+              width={'280px'}
+            ></Card>
           </div>
           <div className="products-list-items">
             <Card type={true} src={productImg2} width={'280px'}></Card>
           </div>
           <div className="products-list-items">
-            <Card type={true} src={productImg3} width={'280px'}></Card>
+            <Card
+              hot={'hot'}
+              tag={true}
+              type={true}
+              src={productImg3}
+              width={'280px'}
+            ></Card>
           </div>
           <div className="products-list-items">
             <Card type={true} src={productImg4} width={'280px'}></Card>
@@ -66,7 +78,13 @@ export const Products = () => {
             <Card type={true} src={productImg7} width={'280px'}></Card>
           </div>
           <div className="products-list-items">
-            <Card type={true} src={productImg8} width={'280px'}></Card>
+            <Card
+              hot={'hot'}
+              tag={true}
+              type={true}
+              src={productImg8}
+              width={'280px'}
+            ></Card>
           </div>
         </div>
       </div>

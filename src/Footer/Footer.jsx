@@ -96,10 +96,12 @@ const Footer = () => {
 export default Footer;
 
 const FooterStyle = styled.footer`
+  padding-top: 100px;
   max-width: 1900px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  background-color: ${Color.whiteColor};
   .footer-top {
     max-width: 1200px;
     margin: 0 auto;

@@ -43,7 +43,7 @@ export const Explore = () => {
 
           <div className="row">
             <div className="col-6 col-left">
-              <Card src={exploreImg1}></Card>
+              <Card src={exploreImg1} width="100%" height="100%"></Card>
             </div>
             <div className="col-6 col-right">
               <div className="explore-img-item">
