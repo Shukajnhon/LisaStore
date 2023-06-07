@@ -1,3 +1,4 @@
+import {BestSeller} from 'components/BestSeller';
 import {Collection} from 'components/Collection';
 import {Explore} from 'components/Explore';
 import {Hero} from 'components/Hero';
@@ -18,6 +19,10 @@ const Home = () => {
 
       <div className="hero-section">
         <Hero></Hero>
+      </div>
+
+      <div className="best-seller-section">
+        <BestSeller></BestSeller>
       </div>
     </div>
   );

@@ -14,7 +14,7 @@ import productImg8 from '../../assets/images/product-img8.svg';
 
 export const Products = () => {
   return (
-    <ProductsStyle className="products">
+    <ProductsStyle className="products" src>
       <div className="products-wrapper">
         <div className="product-title">Or subscribe to the newsletter</div>
         <div className="products-top">
@@ -38,7 +38,8 @@ export const Products = () => {
             <div className="filter-icon">
               <img src={filterIcon} alt="filterIcon" />
             </div>
-            <span className="filter-text">filter</span>
+
+            <span className="filter-text">Filter</span>
           </div>
         </div>
 
@@ -142,3 +143,11 @@ const ProductsStyle = styled.div`
     }
   }
 `;
+
+// const ProductListItem = (src, cardWidth) => {
+//   return (
+//     <div className="products-list-items">
+//       <Card type={true} src={src} width={cardWidth}></Card>
+//     </div>
+//   );
+// };
