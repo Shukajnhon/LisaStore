@@ -160,12 +160,39 @@ const ProductsStyle = styled.div`
       gap: 20px;
     }
   }
-`;
 
-// const ProductListItem = (src, cardWidth) => {
-//   return (
-//     <div className="products-list-items">
-//       <Card type={true} src={src} width={cardWidth}></Card>
-//     </div>
-//   );
-// };
+  // Mediaquery
+  @media (max-width: 1200px) {
+    .product-title {
+    }
+
+    .products-wrapper {
+      margin: 0 30px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .product-title {
+    }
+    .products-wrapper .products-list {
+      justify-content: space-evenly;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .product-title {
+    }
+  }
+
+  @media (max-width: 576px) {
+    .product-title {
+      padding: 0 4px;
+    }
+
+    .products-wrapper .nav-product .nav-product-list .nav-product-item {
+      margin: 0px 2px;
+      padding: 0px 2px;
+      cursor: pointer;
+    }
+  }
+`;

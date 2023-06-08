@@ -8,6 +8,7 @@ import Color from 'Color/Color';
 export const Hero = () => {
   return (
     <HeroStyle className="hero">
+      <div className="hero-background"></div>
       <div className="hero-wrap">
         <div className="hero-title">
           <div className="hero-title-logo">
@@ -37,11 +38,19 @@ export const Hero = () => {
 
 const HeroStyle = styled.div`
   max-width: 1920px;
-  background-image: url(${heroBackground});
-  height: 776px;
-  background-position: right;
   position: relative;
-
+  /* background-image: url(${heroBackground});
+  background-position: right; */
+  .hero-background {
+    width: 100%;
+    height: 776px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(${heroBackground});
+    background-position: right;
+  }
   .hero-wrap {
     position: absolute;
     top: 50%;
@@ -67,6 +76,38 @@ const HeroStyle = styled.div`
     .hero-btn:hover button {
       background-color: ${Color.primaryColor};
       color: ${Color.whiteColor};
+    }
+  }
+
+  // Mediaquery
+  @media (max-width: 1200px) {
+    .hero-background {
+      height: 500px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .hero-background {
+      height: 400px;
+      background-position: top center;
+    }
+
+    .hero-wrap {
+      width: 46%;
+      row-gap: 36px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-wrap .hero-des {
+      /* background-color: blue; */
+    }
+  }
+
+  @media (max-width: 576px) {
+    .hero-wrap .hero-des {
+      /* background-color: green; */
+      /* padding: 0 4px; */
     }
   }
 `;

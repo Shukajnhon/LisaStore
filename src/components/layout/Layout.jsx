@@ -19,5 +19,5 @@ export default Layout;
 const LayoutStyle = styled.div`
   max-width: 1900px;
   margin: 0 auto;
-  background-color: ${Color.backgroundColor1};
+  /* background-color: ${Color.backgroundColor1}; */
 `;

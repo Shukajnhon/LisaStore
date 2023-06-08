@@ -6,18 +6,28 @@ import Color from 'Color/Color';
 export const Account = () => {
   return (
     <AccountStyle className="account-header">
-      <div className="account-icon">
-        <img src={userIcon} alt="user-icon" />
+      <div className="account-header-wrap">
+        <div className="account-icon">
+          <img src={userIcon} alt="user-icon" />
+        </div>
+        <span className="account-text">Account</span>{' '}
       </div>
-      <span className="account-text">Account</span>
     </AccountStyle>
   );
 };
 
 const AccountStyle = styled.div`
-  display: flex;
-  align-items: center;
   cursor: pointer;
+  .account-header-wrap {
+    display: flex;
+    align-items: center;
+  }
+  .account-header-wrap:hover .account-text {
+    color: ${Color.primaryColor};
+  }
+  /* .account-header-wrap:hover .account-icon {
+    color: ${Color.primaryColor};
+  } */
   .account-text {
     font-size: 18px;
     font-weight: 400;

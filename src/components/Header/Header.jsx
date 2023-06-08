@@ -22,10 +22,13 @@ export const Header = () => {
 };
 
 const HeaderStyle = styled.header`
-  max-width: 1200px;
+  max-width: 1920px;
   margin: 0 auto;
   border-bottom: 1px solid ${Color.borderHeader};
+  background-color: ${Color.backgroundColor1};
   .header-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
     height: 64px;
     display: flex;
     justify-content: space-between;
@@ -35,5 +38,39 @@ const HeaderStyle = styled.header`
   .nav-right {
     display: flex;
     align-items: center;
+  }
+
+  // Mediaquery
+  @media (max-width: 1200px) {
+    .header-wrap {
+      /* background-color: yellow; */
+      padding: 0 40px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .header-wrap {
+      /* background-color: red; */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .header-wrap {
+      /* background-color: blue; */
+    }
+    .input-search {
+      display: none;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .header-wrap {
+      /* background-color: green; */
+      padding: 0 4px;
+    }
+    .logo-text {
+      font-size: 32px;
+      line-height: 64px;
+    }
   }
 `;

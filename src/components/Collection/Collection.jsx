@@ -47,9 +47,10 @@ export const Collection = () => {
 };
 
 const CollectStyle = styled.div`
-  margin-top: 120px;
+  padding-top: 120px;
   position: relative;
   margin-bottom: 80px;
+  background-color: ${Color.backgroundColor1};
 
   .leaf-left {
     position: absolute;
@@ -70,6 +71,7 @@ const CollectStyle = styled.div`
     display: flex;
     align-items: center;
     width: 100%;
+    /* padding: 0 40px 70px 40px; */
   }
   .left {
     width: 60%;
@@ -106,6 +108,50 @@ const CollectStyle = styled.div`
     .collect-img img {
       border-top-left-radius: 160px;
       border-bottom-right-radius: 160px;
+    }
+  }
+
+  // Mediaquery
+  @media (max-width: 1200px) {
+    .collection-wrap {
+      /* padding: 0 40px 70px 40px; */
+    }
+    .left {
+      padding: 0px 0 0 30px;
+      max-width: 53%;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .collection-wrap {
+    }
+  }
+
+  @media (max-width: 768px) {
+    .collection-wrap {
+      padding: 0;
+      justify-content: center;
+    }
+    .left {
+      max-width: 100%;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      row-gap: 34px;
+      padding: 22px;
+      .collection-text {
+        text-align: center;
+      }
+    }
+
+    .right {
+      display: none;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .collection-wrap {
+      padding: 0 4px;
     }
   }
 `;

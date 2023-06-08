@@ -62,6 +62,8 @@ const FollowStyle = styled.div`
   padding-bottom: 100px;
   max-width: 1920px;
   margin: 0 auto;
+  background-color: ${Color.backgroundColor1};
+
   .follow-wrap {
     max-width: 1200px;
     margin: 0 auto;
@@ -121,6 +123,7 @@ const FollowStyle = styled.div`
   .follow-list {
     width: calc(100% + 20px);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     column-gap: 20px;
@@ -134,5 +137,35 @@ const FollowStyle = styled.div`
     font-size: 28px;
     font-weight: 500;
     color: ${Color.primaryColor};
+  }
+
+  // Mediaquery
+  @media (max-width: 1200px) {
+    .follow-wrap {
+      margin: 0 30px;
+    }
+
+    .follow-list {
+      justify-content: normal;
+      column-gap: 20px;
+      row-gap: 20px;
+    }
+
+    .item-img {
+      max-width: 218px;
+      max-height: 218px;
+    }
+  }
+
+  @media (max-width: 992px) {
+  }
+
+  @media (max-width: 768px) {
+    .follow-list {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 576px) {
   }
 `;

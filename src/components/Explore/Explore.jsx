@@ -18,19 +18,19 @@ export const Explore = () => {
     <ExploreStyle className="explore">
       <div className="explore-wrapper">
         <div className="explore-brand">
-          <div className="brand-1">
+          <div className="brand-1 brand-img ">
             <img src={brand1} alt="brand-1" />
           </div>
-          <div className="brand-2">
+          <div className="brand-2 brand-img">
             <img src={brand2} alt="brand-2" />
           </div>
-          <div className="brand-3">
+          <div className="brand-3 brand-img">
             <img src={brand3} alt="brand-3" />
           </div>
-          <div className="brand-4">
+          <div className="brand-4 brand-img">
             <img src={brand4} alt="brand-4" />
           </div>
-          <div className="brand-5">
+          <div className="brand-5 brand-img">
             <img src={brand5} alt="brand-5" />
           </div>
         </div>
@@ -101,7 +101,7 @@ const ExploreStyle = styled.div`
       display: grid;
       grid-template-columns: 50% 50%;
       grid-column-gap: 20px;
-      max-height: 600px;
+      /* max-height: 600px; */
     }
 
     .col-left {
@@ -116,7 +116,7 @@ const ExploreStyle = styled.div`
       display: grid;
       grid-template-columns: 50% 50%;
       gap: 20px;
-      max-height: 600px;
+      height: 600px;
 
       .explore-img-item {
         width: 100%;
@@ -126,6 +126,89 @@ const ExploreStyle = styled.div`
           width: 100%;
         }
       }
+    }
+  }
+
+  // Mediaquery
+  @media (max-width: 1200px) {
+    .explore-wrapper {
+      margin: 0 30px;
+    }
+    .explore-brand {
+      padding-bottom: 40px;
+    }
+    .brand-img {
+      max-width: 250px;
+      img {
+        width: 100%;
+      }
+    }
+    .explore-images .explore-title {
+      position: relative;
+      top: -20px;
+      left: 0;
+      transform: rotate(0);
+    }
+
+    .col-6 .col-left {
+      .cardBox {
+        max-width: 548px;
+      }
+    }
+    .explore-images .col-right {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .explore-images .col-right .explore-img-item {
+      max-width: 228px;
+    }
+
+    .cardBox {
+      width: 100%;
+    }
+    .explore-images .col-right {
+      height: 100%;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .explore-brand {
+      flex-wrap: wrap;
+    }
+
+    .explore-images .row {
+      display: flex;
+      flex-wrap: wrap;
+      /* max-height: max-content; */
+      row-gap: 20px;
+      justify-content: center;
+    }
+
+    .col-6 .col-right {
+      justify-content: space-between;
+    }
+    .explore-images .col-right .explore-img-item {
+      max-width: 294px;
+    }
+    .explore-images .col-right {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .explore-wrapper {
+    }
+  }
+
+  @media (max-width: 576px) {
+    .explore-wrapper {
+      padding: 0 4px;
+    }
+
+    .explore-images .col-right {
+      justify-content: center;
+    }
+    .explore-images .col-right {
     }
   }
 `;
