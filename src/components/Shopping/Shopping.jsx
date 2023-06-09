@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import bagIcon from '../../assets/images/bag-icon.svg';
+import {ReactComponent as BagIcon} from '../../assets/images/bag-icon.svg';
 import Color from 'Color/Color';
 
 export const Shopping = () => {
@@ -8,7 +8,8 @@ export const Shopping = () => {
     <ShoppingStyle className="shopping-header">
       <div className="shopping-header-wrap">
         <div className="shopping-icon">
-          <img src={bagIcon} alt="bag-icon" />
+          {/* <img src={bagIcon} alt="bag-icon" /> */}
+          <BagIcon></BagIcon>
         </div>
         <span className="shopping-text">Shopping</span>
       </div>
@@ -25,6 +26,13 @@ const ShoppingStyle = styled.div`
   }
   .shopping-header-wrap:hover .shopping-text {
     color: ${Color.primaryColor};
+  }
+  .shopping-header-wrap:hover svg path {
+    fill: ${Color.primaryColor};
+  }
+
+  .shopping-icon {
+    margin-right: 4px;
   }
   .shopping-text {
     font-size: 18px;

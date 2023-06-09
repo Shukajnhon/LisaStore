@@ -48,40 +48,52 @@ export const Products = () => {
             <Card
               hot={'hot'}
               tag={true}
-              type={true}
+              isDetail={true}
               src={productImg1}
               width={'280px'}
             ></Card>
           </div>
           <div className="products-list-items">
-            <Card type={true} src={productImg2} width={'280px'}></Card>
+            <Card isDetail={true} src={productImg2} width={'280px'}></Card>
           </div>
           <div className="products-list-items">
             <Card
               hot={'hot'}
               tag={true}
-              type={true}
+              isDetail={true}
               src={productImg3}
               width={'280px'}
             ></Card>
           </div>
           <div className="products-list-items">
-            <Card type={true} src={productImg4} width={'280px'}></Card>
+            <Card isDetail={true} src={productImg4} width={'280px'}></Card>
           </div>
           <div className="products-list-items">
-            <Card type={true} src={productImg5} width={'280px'}></Card>
+            <Card
+              isDetail={true}
+              sale={'sale'}
+              tag={true}
+              src={productImg5}
+              width={'280px'}
+            ></Card>
           </div>
           <div className="products-list-items">
-            <Card type={true} src={productImg6} width={'280px'}></Card>
+            <Card isDetail={true} src={productImg6} width={'280px'}></Card>
           </div>
           <div className="products-list-items">
-            <Card type={true} src={productImg7} width={'280px'}></Card>
+            <Card
+              tag={true}
+              sale={'sale'}
+              isDetail={true}
+              src={productImg7}
+              width={'280px'}
+            ></Card>
           </div>
           <div className="products-list-items">
             <Card
               hot={'hot'}
               tag={true}
-              type={true}
+              isDetail={true}
               src={productImg8}
               width={'280px'}
             ></Card>

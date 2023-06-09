@@ -93,23 +93,23 @@ export const BestSeller = () => {
             <Card
               hot={'hot'}
               tag={true}
-              type
+              isDetail
               width="290px"
               src={bestSellImg1}
             ></Card>
-            <Card type width="290px" src={bestSellImg2}></Card>
-            <Card type width="290px" src={bestSellImg3}></Card>
-            <Card type width="290px" src={bestSellImg4}></Card>
+            <Card isDetail width="290px" src={bestSellImg2}></Card>
+            <Card isDetail width="290px" src={bestSellImg3}></Card>
+            <Card isDetail width="290px" src={bestSellImg4}></Card>
             <Card
               sale={'sale'}
               tag={true}
-              type
+              isDetail
               width="290px"
               src={bestSellImg5}
             ></Card>
-            <Card type width="290px" src={bestSellImg6}></Card>
-            <Card type width="290px" src={bestSellImg7}></Card>
-            <Card type width="290px" src={bestSellImg8}></Card>
+            <Card isDetail width="290px" src={bestSellImg6}></Card>
+            <Card isDetail width="290px" src={bestSellImg7}></Card>
+            <Card isDetail width="290px" src={bestSellImg8}></Card>
           </Slider>
         </div>
       </div>
@@ -191,7 +191,7 @@ const BestSellerStyle = styled.div`
     }
   }
 
-  .card-img .type-favorite {
+  .card-img .isDetail-favorite {
     bottom: 0;
   }
 

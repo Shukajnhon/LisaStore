@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import {AiOutlineHeart} from 'react-icons/ai';
+import {ReactComponent as HeartIcon} from '../../assets/images/heart.svg';
 import {BsFillBagFill} from 'react-icons/bs';
-
-import bagIcon from '../../assets/images/bag-shopping-icon.svg';
 import searchIcon from '../../assets/images/search-icon.svg';
 
 import Color from 'Color/Color';
@@ -20,8 +18,10 @@ const Card = ({
   productName,
   productType,
   price,
+  priceSale,
   type,
   tag,
+  isDetail,
 }) => {
   return (
     <CardStyle className="cardBox" width={width} height={height}>
@@ -43,7 +43,7 @@ const Card = ({
           </div>
         )}
 
-        {!type ? (
+        {!isDetail ? (
           <div className="detail">
             <div className="left">
               <div className="name">{name} Jeans</div>
@@ -58,8 +58,7 @@ const Card = ({
           <div className="type-favorite">
             <div className="left-icon">
               <div className="detail-favorite-icon">
-                <img src={bagIcon} alt="bagIcon" />
-                {/* <AiOutlineHeart></AiOutlineHeart> */}
+                <HeartIcon></HeartIcon>
               </div>
               <div className="detail-search-icon">
                 <img src={searchIcon} alt="searchIcon" />
@@ -78,14 +77,20 @@ const Card = ({
           </div>
         )}
       </div>
-      {type && (
+      {isDetail && (
         <div className="card-body">
           <div className="body-title">
             <span>{productName} Adicolor Classics Joggers</span>
           </div>
           <div className="body-content">
             <div className="product-type">{productType} Dress</div>
-            <div className="price">${price} 63.85</div>
+
+            <div className="price-wrap">
+              <div className={sale ? 'price hadSale' : 'price'}>
+                ${price} 63.85
+              </div>
+              {sale && <div className="priceSale">${priceSale} 20</div>}
+            </div>
           </div>
         </div>
       )}
@@ -242,9 +247,27 @@ const CardStyle = styled.div`
         font-weight: 400;
         color: ${Color.textColor3};
       }
+
+      .price-wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 50%;
+      }
       .price {
         font-size: 16px;
         font-weight: 600;
+      }
+      .hadSale {
+        font-size: 16px;
+        font-weight: 400;
+        margin-right: 14px;
+        text-decoration: line-through;
+      }
+      .priceSale {
+        font-size: 16px;
+        font-weight: 500;
+        color: ${Color.primaryColor};
       }
     }
   }
